@@ -7,7 +7,6 @@ RUN apk -v --update add \
         mailcap \
         mongodb-tools \
         && \
-    pip install --upgrade awscli==1.18.93 s3cmd==2.0.1 python-magic && \
-    apk -v --purge del py-pip && \
+    pip install --upgrade --no-cache-dir awscli==1.18.93 s3cmd==2.0.1 python-magic && \
     rm /var/cache/apk/*
 ENTRYPOINT ["aws"]
