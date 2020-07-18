@@ -6,6 +6,8 @@ RUN apk -v --update add \
         less \
         mailcap \
         mongodb-tools \
+        jq \
+        make \
         && \
     pip install --upgrade --no-cache-dir awscli==1.18.93 s3cmd==2.0.1 python-magic && \
     rm /var/cache/apk/*
